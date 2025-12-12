@@ -1,0 +1,13 @@
+[package]
+name = "physics-driven"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+avian2d = "0.4.1"
+avian3d = "0.4.1"
+bevy = "0.17.3"
+
+[[example]]
+name = "2d_gear"
+path = "examples/2d/gear.rs"
