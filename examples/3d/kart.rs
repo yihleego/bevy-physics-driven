@@ -130,6 +130,7 @@ fn setup(
             LinearDamping(1.0),
             AngularDamping(4.0),
             CameraTarget,
+            CollisionEventsEnabled,
         ))
         .id();
 
@@ -252,6 +253,7 @@ fn spawn_track(
         Collider::cuboid(5.0, 0.5, 5.0),
         Sensor,
         BoostPad { strength: 100.0 },
+        CollisionEventsEnabled,
         Transform::from_xyz(-15.0, 0.1, 0.0),
     ));
 
@@ -262,6 +264,7 @@ fn spawn_track(
         Collider::cuboid(5.0, 0.5, 2.0),
         Sensor,
         JumpPad { strength: 15.0 },
+        CollisionEventsEnabled,
         Transform::from_xyz(15.0, 0.1, -40.0),
     ));
 
@@ -279,6 +282,7 @@ fn spawn_track(
             Collider::cuboid(20.0, 5.0, 1.0),
             Sensor,
             Checkpoint { index: i },
+            CollisionEventsEnabled,
             Transform::from_translation(*pos + Vec3::Y * 2.5),
         ));
     }
