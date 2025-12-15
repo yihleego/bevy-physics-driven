@@ -348,7 +348,7 @@ fn kart_control_system(
 }
 
 fn trigger_detection_system(
-    mut collision_event_reader: EventReader<CollisionStart>,
+    mut collision_event_reader: MessageReader<CollisionStart>,
     mut kart_query: Query<&mut LinearVelocity>, // No ExternalForce needed
     boost_query: Query<&BoostPad>,
     jump_query: Query<&JumpPad>,
@@ -399,7 +399,7 @@ fn trigger_detection_system(
     }
 }
 
-fn game_logic_system(game_state_query: Query<&GameState>, mut exit: EventWriter<AppExit>) {
+fn game_logic_system(game_state_query: Query<&GameState>, mut exit: MessageWriter<AppExit>) {
     if let Some(game_state) = game_state_query.iter().next() {
         if game_state.laps >= 2 {
             println!("RACE FINISHED! You completed 2 laps.");
