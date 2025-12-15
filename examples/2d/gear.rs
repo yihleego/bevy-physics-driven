@@ -12,7 +12,7 @@ fn main() {
         // 添加自定义的2D调试插件，用于可视化物理组件
         .add_plugins(Debug2dPlugin)
         // 插入全局重力资源，设置为Vec2::ZERO表示零重力，适用于自顶向下的视图
-        .insert_resource(Gravity(Vec2::ZERO)) 
+        .insert_resource(Gravity(Vec2::ZERO))
         // 初始化拖动状态资源
         .init_resource::<DragState>()
         // 在启动时运行setup系统，用于初始化场景
@@ -120,12 +120,12 @@ fn spawn_gear(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,
     materials: &mut ResMut<Assets<ColorMaterial>>,
-    pos: Vec2,          // 齿轮位置
-    radius: f32,        // 齿轮半径
-    t_len: f32,         // 齿的长度
-    t_width: f32,       // 齿的宽度
-    teeth: usize,       // 齿的数量
-    is_driver: bool,    // 是否为驱动齿轮
+    pos: Vec2,       // 齿轮位置
+    radius: f32,     // 齿轮半径
+    t_len: f32,      // 齿的长度
+    t_width: f32,    // 齿的宽度
+    teeth: usize,    // 齿的数量
+    is_driver: bool, // 是否为驱动齿轮
 ) {
     // 1. 创建复合碰撞体
     let mut parts = Vec::new();

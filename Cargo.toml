@@ -1,5 +1,5 @@
 [package]
-name = "physics-driven"
+name = "physics_driven"
 version = "0.1.0"
 edition = "2024"
 
@@ -11,3 +11,7 @@ bevy = "0.17.3"
 [[example]]
 name = "2d_gear"
 path = "examples/2d/gear.rs"
+
+[[example]]
+name = "3d_kart"
+path = "examples/3d/kart.rs"
