@@ -15,3 +15,7 @@ path = "examples/2d/gear.rs"
 [[example]]
 name = "3d_kart"
 path = "examples/3d/kart.rs"
+
+[[example]]
+name = "3d_mk"
+path = "examples/3d/mk.rs"
