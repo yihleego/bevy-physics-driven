@@ -447,7 +447,7 @@ fn kart_arcade_physics(
             let Some((wheel_world, normal, compression)) = hit else {
                 state.last_wheel_compression[i] = 0.0;
                 continue;
-            };/
+            };
 
             let compression_rate = (compression - state.last_wheel_compression[i]) / dt;
             state.last_wheel_compression[i] = compression;
